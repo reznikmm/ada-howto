@@ -93,7 +93,7 @@ Ada.Text_IO.Put_Line (V1_Ptr'Image);
 
 
 
-Note square brackets in array image. In Ada 202 array aggregates could be written this way!
+Note square brackets in array image. In Ada 2020 array aggregates could be written this way!
 
 ### References
 
