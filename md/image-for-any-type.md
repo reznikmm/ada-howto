@@ -105,3 +105,5 @@ More details:
 
 Do you like this? Support us on [patreon](https://www.patreon.com/ada_ru)!
 
+Live discussions: [Telegram](https://t.me/ada_lang), [Matrix](https://matrix.to/#/#ada-lang:matrix.org).
+
