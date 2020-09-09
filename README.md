@@ -9,6 +9,7 @@ Collection of How-to documents for Ada.
  * [Ada 2020: `'Image` attribute for any type](md/image-for-any-type.md)
  * [Ada 2020: Redefining the `'Image` attribute](md/image-redefine.md)
  * [Ada 2020: User-defined literals](md/user-defined-literals.md)
+ * [Ada 2020: Advanced array aggregates](md/array-aggregates.md)
 
 ----
 
