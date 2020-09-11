@@ -24,7 +24,7 @@ with Ada.Text_IO;
 ```
 
 ## Delta aggregate for records
-Somtimes you need to create a copy of an object with a few modifications. Before Ada 2020 it would involve a dummy object declaration or an aggregate with associations for each property. Without "a declaration expression", the dummy object approach doesn't work in a contract aspects. A limited component won't work with dummy object approach neither. While an re-listing properties in an aggregate could be too hard. 
+Sometimes you need to create a copy of an object with a few modifications. Before Ada 2020 it would involve a dummy object declaration or an aggregate with associations for each property. Without "a declaration expression", the dummy object approach doesn't work in contract aspects. A limited component won't work with dummy object approach either. While  re-listing properties in an aggregate could be too hard. 
 
 So, in Ada 2020, you can use a _delta aggregate_. For instance:
 
@@ -54,7 +54,7 @@ Ada.Text_IO.Put_Line (Projection_1'Image);
 
 
 
-The more component you have, the more you will like the delta aggregate.
+The more components you have, the more you will like the delta aggregate.
 
 ## Delta aggregate for arrays
 
