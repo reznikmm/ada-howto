@@ -11,6 +11,7 @@ Collection of How-to documents for Ada.
  * [Ada 2020: User-defined literals](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/user-defined-literals.md)
  * [Ada 2020: Advanced array aggregates](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/array-aggregates.md)
  * [Ada 2020: Delta aggregates](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/delta-aggregate.md)
+ * [Ada 2020: Target Name Symbol (`@`)]((https://github.com/reznikmm/ada-howto/blob/ce-2020/md/assignment-target.md)
 
 ----
 
