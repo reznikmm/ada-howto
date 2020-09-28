@@ -14,6 +14,8 @@ Collection of How-to documents for Ada.
  * [Ada 2020: Target Name Symbol (`@`)](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/assignment-target.md)
  * Runtime LIbrary updates:
  * [Ada 2020: Big Numbers. RSA example](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/big-numbers.md)
+ * Other improvements:
+ * [Ada 2020: Interfacing C variadic functions](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/importing-variadic-functions.md)
 
 ----
 
