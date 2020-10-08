@@ -12,7 +12,8 @@ Collection of How-to documents for Ada.
  * [Ada 2020: Advanced array aggregates](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/array-aggregates.md)
  * [Ada 2020: Delta aggregates](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/delta-aggregate.md)
  * [Ada 2020: Target Name Symbol (`@`)](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/assignment-target.md)
- * Runtime LIbrary updates:
+ * [Ada 2020: Enumeration representation](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/enum-val.md)
+ * Runtime Library updates:
  * [Ada 2020: Big Numbers. RSA example](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/big-numbers.md)
  * Other improvements:
  * [Ada 2020: Interfacing C variadic functions](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/importing-variadic-functions.md)
