@@ -12,7 +12,8 @@ Collection of How-to documents for Ada.
  * [Ada 2020: Advanced array aggregates](md/array-aggregates.md)
  * [Ada 2020: Delta aggregates](md/delta-aggregate.md)
  * [Ada 2020: Target name symbol (`@`)](md/assignment-target.md)
- * Runtime LIbrary updates:
+ * [Ada 2020: Enumeration representation](md/enum-val.md)
+ * Runtime Library updates:
  * [Ada 2020: Big numbers. The RSA example](md/big-numbers.md)
  * Other improvements:
  * [Ada 2020: Interfacing C variadic functions](md/importing-variadic-functions.md)
