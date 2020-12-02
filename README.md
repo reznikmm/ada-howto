@@ -1,9 +1,34 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/reznikmm/ada-howto/master?filepath=%2Fhome%2Fjovyan%2Fnb%2FHello_Ada.ipynb)
+# Advent of Code 2020 in Ada
 
-# Ada Howto Index
-Collection of How-to documents for Ada.
+This is the [Advent of Code 2020](https://adventofcode.com/2020) written as
+[Ada Jupyter Notebooks](https://github.com/reznikmm/jupyter).
 
-* [How to use Jupyter Ada Kernel?](md/Hello_Ada.md)
+|Day |Day |Day |Day |Day |Day |Day |
+|----|----|----|----|----|----|----|
+|[01]|[02]|    |    |    |    |    |
+
+[01]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/01/01.md "01"
+[02]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/02/02.md "02"
+
+----
+
+## These authors also proposed solutions (in random order)
+
+* [Jeremy Grosser](https://github.com/JeremyGrosser/advent)
+* [John Perry](https://github.com/johnperry-math/AoC2020)
+* [Stephen Leake](https://github.com/stephe-ada-guru/Advent_of_Code)
+* [Per Sandberg](https://github.com/persan/advent-of-code-2020)
+* [smionean](https://github.com/smionean/AdventOfCode)
+* [Rolf Ebert](https://github.com/RREE/AOC_2020)
+
+Also see the post on [comp.lang.ada](https://groups.google.com/g/comp.lang.ada/c/LHJrWYnjtl8/m/OmB25MCABQAJ) or
+[reddit](https://www.reddit.com/r/ada/comments/k4fn9w/anyone_else_participating_in_advent_of_code/).
+
+
+# Other references.
+## Collection of How-to documents for Ada.
+
+* [How to use Jupyter Ada Kernel?](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md)
 
 ### How to use Ada 202x with GNAT Community 2020
  * [Ada 2020: `'Image` attribute for any type](https://github.com/reznikmm/ada-howto/blob/ce-2020/md/image-for-any-type.md)
@@ -22,4 +47,5 @@ Collection of How-to documents for Ada.
 
 Do you like this? Support us on [patreon](https://www.patreon.com/ada_ru)!
 
-Live discussions: [Telegram](https://t.me/ada_lang), [Matrix](https://matrix.to/#/#ada-lang:matrix.org).
+Live discussions: [Telegram](https://t.me/ada_lang), [Matrix](https://matrix.to/#/#ada-lang:matrix.org),
+[Gitter](https://gitter.im/ada-lang/Lobby).
