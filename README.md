@@ -5,11 +5,12 @@ This is the [Advent of Code 2020](https://adventofcode.com/2020) written as
 
 |Day |Day |Day |Day |Day |Day |Day |
 |----|----|----|----|----|----|----|
-|[01]|[02]|[03]|    |    |    |    |
+|[01]|[02]|[03]|[04]|    |    |    |
 
 [01]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/01/01.md "01"
 [02]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/02/02.md "02"
 [03]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/03/03.md "03"
+[04]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/04/04.md "04"
 
 ----
 
@@ -22,6 +23,7 @@ This is the [Advent of Code 2020](https://adventofcode.com/2020) written as
 * [smionean](https://github.com/smionean/AdventOfCode)
 * [Rolf Ebert](https://github.com/RREE/AOC_2020)
 * [Wendel Wang](https://gitlab.com/MarcusE1W/prog/-/tree/master/ada/aoc)
+* [Gautier de Montmollin](https://github.com/zertovitch/hac/tree/master/exm/aoc/2020)
 
 Also see the post on [comp.lang.ada](https://groups.google.com/g/comp.lang.ada/c/LHJrWYnjtl8/m/OmB25MCABQAJ) or
 [reddit](https://www.reddit.com/r/ada/comments/k4fn9w/anyone_else_participating_in_advent_of_code/).
