@@ -6,7 +6,7 @@ This is the [Advent of Code 2020](https://adventofcode.com/2020) written as
 |Day |Day |Day |Day |Day |Day |Day |
 |----|----|----|----|----|----|----|
 |[01]|[02]|[03]|[04]|[05]|[06]|[07]|
-|[08]|[09]|    |[11]|[12]|[13]|    |
+|[08]|[09]|    |[11]|[12]|[13]|[14]|
 
 [01]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/01/01.md "01"
 [02]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/02/02.md "02"
@@ -20,6 +20,7 @@ This is the [Advent of Code 2020](https://adventofcode.com/2020) written as
 [11]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/11/11.md "11"
 [12]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/12/12.md "12"
 [13]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/13/13.md "13"
+[14]: https://github.com/reznikmm/ada-howto/blob/advent-2020/md/14/14.md "14"
 
 ----
 
