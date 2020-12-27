@@ -43,6 +43,9 @@ This is the [Advent of Code 2020](https://adventofcode.com/2020) written as
 * [Rolf Ebert](https://github.com/RREE/AOC_2020)
 * [Wendel Wang](https://gitlab.com/MarcusE1W/prog/-/tree/master/ada/aoc)
 * [Gautier de Montmollin](https://github.com/zertovitch/hac/tree/master/exm/aoc/2020)
+* [YoannDupont](https://github.com/YoannDupont/advent_of_code_2020)
+* [Timur Samkharadze](https://github.com/timurgen/AdventOfAda/tree/master/2020)
+* [John Warwick](https://github.com/jwarwick/aoc_2020)
 
 Also see the post on [comp.lang.ada](https://groups.google.com/g/comp.lang.ada/c/LHJrWYnjtl8/m/OmB25MCABQAJ) or
 [reddit](https://www.reddit.com/r/ada/comments/k4fn9w/anyone_else_participating_in_advent_of_code/).
