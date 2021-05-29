@@ -1,23 +1,23 @@
 # Ada 2020: Advanced Array Aggregates
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2020).
+This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/reznikmm/ada-howto/ce-2020?filepath=%2Fhome%2Fjovyan%2Fnb%2Farray-aggregates.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/reznikmm/ada-howto/ce-2021?filepath=%2Fhome%2Fjovyan%2Fnb%2Farray-aggregates.ipynb)
 
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
 ### Ada 2020 activation
 Firstly, let's activate Ada 2020 support in the compiler.
-Usually we do this by `-gnat2020` option in compiler command line or in the project file
-(preferred). But in this notebook we will do this by the `pragma Ada_2020`.
+Usually we do this by `-gnat2022` option in compiler command line or in the project file
+(preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need some predefined packages.
 
 
 ```Ada
-pragma Ada_2020;
+pragma Ada_2022;
 
 with Ada.Text_IO;
 ```
