@@ -5,18 +5,18 @@ Collection of How-to documents for Ada.
 
 * [How to use Jupyter Ada Kernel?](md/Hello_Ada.md)
 
-### How to use Ada 202x with GNAT Community 2020
- * [Ada 2020: `'Image` attribute for any type](md/image-for-any-type.md)
- * [Ada 2020: Redefining the `'Image` attribute](md/image-redefine.md)
- * [Ada 2020: User-defined literals](md/user-defined-literals.md)
- * [Ada 2020: Advanced array aggregates](md/array-aggregates.md)
- * [Ada 2020: Delta aggregates](md/delta-aggregate.md)
- * [Ada 2020: Target name symbol (`@`)](md/assignment-target.md)
- * [Ada 2020: Enumeration representation](md/enum-val.md)
+### How to use Ada 202x with GNAT Community 2021
+ * [Ada 2022: `'Image` attribute for any type](md/image-for-any-type.md)
+ * [Ada 2022: Redefining the `'Image` attribute](md/image-redefine.md)
+ * [Ada 2022: User-defined literals](md/user-defined-literals.md)
+ * [Ada 2022: Advanced array/container aggregates](md/array-aggregates.md)
+ * [Ada 2022: Delta aggregates](md/delta-aggregate.md)
+ * [Ada 2022: Target name symbol (`@`)](md/assignment-target.md)
+ * [Ada 2022: Enumeration representation](md/enum-val.md)
  * Runtime Library updates:
- * [Ada 2020: Big numbers. The RSA example](md/big-numbers.md)
+ * [Ada 2022: Big numbers. The RSA example](md/big-numbers.md)
  * Other improvements:
- * [Ada 2020: Interfacing C variadic functions](md/importing-variadic-functions.md)
+ * [Ada 2022: Interfacing C variadic functions](md/importing-variadic-functions.md)
 
 ----
 

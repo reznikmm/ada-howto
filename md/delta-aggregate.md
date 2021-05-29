@@ -1,6 +1,6 @@
-# Ada 2020: Delta Aggregates
+# Ada 2022: Delta Aggregates
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
+This post is a part of [the Ada 2022 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
@@ -9,8 +9,8 @@ You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
-### Ada 2020 activation
-Firstly, let's activate Ada 2020 support in the compiler.
+### Ada 2022 activation
+Firstly, let's activate Ada 2022 support in the compiler.
 Usually we do this by `-gnat2022` option in compiler command line or in the project file
 (preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need some predefined packages.
@@ -24,9 +24,9 @@ with Ada.Text_IO;
 ```
 
 ## Delta aggregate for records
-Sometimes you need to create a copy of an object with a few modifications. Before Ada 2020 it would involve a dummy object declaration or an aggregate with associations for each property. Without "a declaration expression", the dummy object approach doesn't work in contract aspects. A limited component won't work with dummy object approach either. While  re-listing properties in an aggregate could be too hard. 
+Sometimes you need to create a copy of an object with a few modifications. Before Ada 2022 it would involve a dummy object declaration or an aggregate with associations for each property. Without "a declaration expression", the dummy object approach doesn't work in contract aspects. A limited component won't work with dummy object approach either. While  re-listing properties in an aggregate could be too hard. 
 
-So, in Ada 2020, you can use a _delta aggregate_. For instance:
+So, in Ada 2022, you can use a _delta aggregate_. For instance:
 
 
 ```Ada
@@ -47,9 +47,9 @@ Ada.Text_IO.Put_Line (Projection_1'Image);
 
 
     
-    (x =>  1.00000E+00,
-     y =>  2.00000E+00,
-     z =>  0.00000E+00)
+    (X =>  1.00000E+00,
+     Y =>  2.00000E+00,
+     Z =>  0.00000E+00)
 
 
 
@@ -64,8 +64,8 @@ There is also the delta aggregate for arrays. You can change array elements with
 ```Ada
 type Vector_3D is array (1 .. 3) of Float;
 
-Point_2 : constant Vector_3D := [1.0, 2.0, 3.0];
-Projection_2 : constant Vector_3D := [Point_2 with delta 3 => 0.0];
+Point_2 : constant Vector_3D := (1.0, 2.0, 3.0);
+Projection_2 : constant Vector_3D := (Point_2 with delta 3 => 0.0);
 ```
 
 
@@ -85,7 +85,7 @@ Ada.Text_IO.Put_Line (Projection_2'Image);
 You can use parentheses for array aggregates, but you can't use square brackets for record aggregates.
 
 ## References:
- * [Ada Reference Manual 2020 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-4-3-4.html)
+ * [Ada Reference Manual 2022 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-4-3-4.html)
  * [AI12-0127-1](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0127-1.TXT)
  ----
 

@@ -1,6 +1,6 @@
-# Ada 2020: Interfacing C variadic functions
+# Ada 2022: Interfacing C variadic functions
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
+This post is a part of [the Ada 2022 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
@@ -9,8 +9,8 @@ You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
-### Ada 2020 activation
-Firstly, let's activate Ada 2020 support in the compiler.
+### Ada 2022 activation
+Firstly, let's activate Ada 2022 support in the compiler.
 Usually we do this by `-gnat2022` option in compiler command line or in the project file
 (preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need some predefined packages.
@@ -48,7 +48,7 @@ Then we call it as usual Ada function:
 
 
 ```Ada
-printf_double (Interfaces.C.To_C ("Pi=%f"), Ada.Numerics.π);
+printf_double (Interfaces.C.To_C ("Pi=%f"), Ada.Numerics.PI);
 ```
 
 
@@ -85,7 +85,7 @@ printf_int (Interfaces.C.To_C ("d=%d"), 5);
 
 The Ada compiler will not use `%rax` register at all (since you can't put any float argument, because there is no float parameter in the Ada wrapper function declaration). As result, you will get crash, stack corruption or any other undefined behavior.
 
-To fix this, Ada 2020 provides a new family of calling convention names - `C_Variadic_`_N_:
+To fix this, Ada 2022 provides a new family of calling convention names - `C_Variadic_`_N_:
 
 > The convention
 > `C_Variadic_`*n* is the calling convention for a variadic C function
@@ -136,7 +136,7 @@ So, I consider this as a very useful fix for Ada-to-C interfacing facility.
 
 
 ## References:
- * [Ada Reference Manual 2020 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-B-3.html)
+ * [Ada Reference Manual 2022 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-B-3.html)
  * [AI12-0028-1](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0028-1.TXT)
  * [StackOverflow question](https://stackoverflow.com/questions/35819037/variadic-function-in-ada-c-ada-binding)
  ----

@@ -1,6 +1,6 @@
-# Ada 2020: Redefining the `'Image` attribute
+# Ada 2022: Redefining the `'Image` attribute
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
+This post is a part of [the Ada 2022 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
@@ -9,8 +9,8 @@ You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
-### Ada 2020 activation
-Firstly, let's activate Ada 2020 support in the compiler.
+### Ada 2022 activation
+Firstly, let's activate Ada 2022 support in the compiler.
 Usually we do this by `-gnat2022` option in compiler command line or in the project file
 (preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need the `Text_IO` package.
@@ -22,21 +22,13 @@ pragma Ada_2022;
 with Ada.Text_IO;
 ```
 
-In Ada 2020 you can redefine `'Image` attribute for your type. And GNAT Community Edition 2020 does it in its-own (rather ugly from my point of view) way. It differs from ARM 2020 Draft.
-
-### A bit of history
-
-[Initially](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/ai12s/ai12-0020-1.txt?rev=1.20),
-ARG used `Ada.Streams.Root_Stream_Type'Class` to write a string image there. I didn't like this approach, because it's too low-level, error prone and nonportable, so I wrote [a proposal](https://github.com/AdaCore/ada-spark-rfcs/pull/17). I proposed to add a new abstraction Output_Text_Stream, where you can write Wide_Wide_String to. No encodings games, not CR/LF handling, no ridiculous UTF8_Strings. I have no explanation why the proposal isn't good enough nor argument why it should be done in a different way. Instead [the Standard](http://www.ada-auth.org/standards/2xaarm/html/AA-4-10.html) was [changed](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/ai12s/ai12-0340-1.txt?rev=1.3) by adding Root_Buffer_Type, where you can `Put` a `Wide_Wide_String` and `Get` a `String` with no idea how it will be converted.
-
-### A working example
-So, how GNAT CE 2020 does this? It does in a complete different way, I would say.
+In Ada 2022 you can redefine `'Image` attribute for your type. Corresponding syntax has been changed several times. Let's see how does it work in GNAT Community 2021.
 
 Firstly, you need some package:
 
 
 ```Ada
-with Ada.Strings.Text_Output.Utils;
+with Ada.Strings.Text_Buffers;
 ```
 
 Then, for your type you will define a new aspect `Put_Image`:
@@ -51,22 +43,22 @@ package Source_Locations is
      with Put_Image => My_Put_Image;
 
    procedure My_Put_Image
-     (Sink  : in out Ada.Strings.Text_Output.Sink'Class;
-      Value : Source_Location);
+     (Output : in out Ada.Strings.Text_Buffers.Root_Buffer_Type'Class;
+      Value  : Source_Location);
 end Source_Locations;
 
 package body Source_Locations is
 
    procedure My_Put_Image
-     (Sink  : in out Ada.Strings.Text_Output.Sink'Class;
-      Value : Source_Location)
+     (Output : in out Ada.Strings.Text_Buffers.Root_Buffer_Type'Class;
+      Value  : Source_Location)
    is
       Line   : constant String := Value.Line'Image;
       Column : constant String := Value.Column'Image;
       Result : constant String :=
         Line (2 .. Line'Last) & ':' & Column (2 .. Column'Last);
    begin
-       Ada.Strings.Text_Output.Utils.Put_UTF_8 (Sink, Result);
+      Output.Put (Result);
    end My_Put_Image;
 
 end Source_Locations;
@@ -94,40 +86,29 @@ Ada.Text_IO.Put_Line ("Text position: " & Line_10'Image);
 
 
 
-Looks like it works. But, will it work in non-UTF-8 environment? No body knows, because it's implementation defined, I guess.
+Looks like it works.
 
-### What's the `Sink`?
+### What's the `Root_Buffer_Type`?
 
-Let's see how `Ada.Strings.Text_Output.Sink` is defined.
+Let's see how it is defined in `Ada.Strings.Text_Buffers` package.
 
 ```Ada
-   type Sink (<>) is abstract tagged limited private;
-   type Sink_Access is access all Sink'Class with Storage_Size => 0;
-   --  Sink is a character sink; you can send characters to a Sink.
-   --  UTF-8 encoding is used.
+type Root_Buffer_Type is abstract tagged limited private;
 
-   procedure Full_Method (S : in out Sink) is abstract;
-   procedure Flush_Method (S : in out Sink) is abstract;
+procedure Put
+  (Buffer : in out Root_Buffer_Type;
+   Item   : in     String) is abstract;
 
 ```
 
-So,
- * How to write strings to the `Sink`?
- * Why should I use UTF-8?
- * Will it work in non-utf-8 environment?
- * How to write a muliline image in a portable way?
- * Will it do a correct Unicode handling for me?
- * Can I use my-own `Sink` to stream value image into a DB or XML, for instance?
- * Can we convince the ARG to do this better or just open the discussion to the community? 
+Besides `Put` there are also `Wide_Put`, `Wide_Wide_Put`, `Put_UTF_8`, `Wide_Put_UTF_16`.
+And `New_Line`, `Increase_Indent`, `Decrease_Indent`.
 
-I don't know. Do I like this? Not at all.
-
-Do you?
 
 ## References:
- * [Ada Reference Manual 2020 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-4-10.html)
+ * [Ada Reference Manual 2022 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-4-10.html)
  * [AI12-0020-1](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0020-1.TXT)
- * [AI12-0340-1](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0340-1.TXT)
+ * [AI12-0384-2](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/ai12s/AI12-0384-2.TXT)
  * [RFC](https://github.com/AdaCore/ada-spark-rfcs/blob/ccde7846cfabd9c465179f80ae27ae634a3d69db/considered/rfc-string_stream_in_put_image.rst) and [comments](https://github.com/AdaCore/ada-spark-rfcs/pull/17)
  * [Unicode Strings in Ada 2012](https://two-wrongs.com/unicode-strings-in-ada-2012.html)
 ----

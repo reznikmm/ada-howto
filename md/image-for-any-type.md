@@ -1,6 +1,6 @@
-# Ada 2020: `'Image` attribute for any type
+# Ada 2022: `'Image` attribute for any type
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
+This post is a part of [the Ada 2022 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
@@ -9,8 +9,8 @@ You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
-### Ada 2020 activation
-Firstly, let's activate Ada 2020 support in the compiler.
+### Ada 2022 activation
+Firstly, let's activate Ada 2022 support in the compiler.
 Usually we do this by `-gnat2022` option in compiler command line or in the project file
 (preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need the `Text_IO` package.
@@ -47,7 +47,7 @@ Ada.Text_IO.Put_Line
 
 
 
-### `'Image` in Ada 2020 works for any type
+### `'Image` in Ada 2022 works for any type
 
 Now you can apply `'Image` attribute for any type, including records, array, access and private types. Let's see how this works.
 
@@ -85,15 +85,15 @@ Ada.Text_IO.Put_Line (V1_Ptr'Image);
     
     [ 1,  2,  3]
     
-    (line =>  10,
-     column =>  3)
+    (LINE =>  10,
+     COLUMN =>  3)
     
-    (access 7ff5c5717138)
+    (access 7fe923d15158)
 
 
 
 
-Note square brackets in array image. In Ada 2020 array aggregates could be written this way!
+Note square brackets in array image. In Ada 2022 array aggregates could be written this way!
 
 ### References
 

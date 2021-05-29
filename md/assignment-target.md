@@ -1,6 +1,6 @@
-# Ada 2020: Target Name Symbol (`@`)
+# Ada 2022: Target Name Symbol (`@`)
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
+This post is a part of [the Ada 2022 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
@@ -9,8 +9,8 @@ You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
-### Ada 2020 activation
-Firstly, let's activate Ada 2020 support in the compiler.
+### Ada 2022 activation
+Firstly, let's activate Ada 2022 support in the compiler.
 Usually we do this by `-gnat2022` option in compiler command line or in the project file
 (preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need some predefined packages.
@@ -22,7 +22,7 @@ pragma Ada_2022;
 with Ada.Text_IO;
 ```
 
-Ada 2020 introduces a new symbol `@`. It could appears only at the right side of an assignment statement. This symbol works as a name of the left side of the assignment statement. It was introduced to avoid code duplication. Instead of retyping (potentially long) name you can just use `@` wherever you need it.
+Ada 2022 introduces a new symbol `@`. It could appears only at the right side of an assignment statement. This symbol works as a name of the left side of the assignment statement. It was introduced to avoid code duplication. Instead of retyping (potentially long) name you can just use `@` wherever you need it.
 
 The target name symbol denotes a constant, so you can't pass it into `[in] out` argument of a function.
 
@@ -55,8 +55,8 @@ Ada.Text_IO.Put_Line (Statistic_For_My_Data'Image);
 
 
     
-    (count =>  5,
-     total =>  1.50000E+01)
+    (COUNT =>  5,
+     TOTAL =>  1.50000E+01)
 
 
 
@@ -96,7 +96,7 @@ auto& a = my_data[to_index(1)];
 a = a * a - 3.0 * a;
 ```
 
-In Ada 2020 you can use a corresponding renaming:
+In Ada 2022 you can use a corresponding renaming:
 
 
 
@@ -120,7 +120,7 @@ Here we use a new shorten form of the rename declaration, but anyway this looks 
 
 
 ## References:
- * [Ada Reference Manual 2020 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-5-2-1.html)
+ * [Ada Reference Manual 2022 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-5-2-1.html)
  * [AI12-0125-3](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0125-3.TXT)
  ----
 

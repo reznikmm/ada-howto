@@ -1,6 +1,6 @@
-# Ada 2020: User-Defined Literals
+# Ada 2022: User-Defined Literals
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
+This post is a part of [the Ada 2022 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
@@ -9,8 +9,8 @@ You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
-### Ada 2020 activation
-Firstly, let's activate Ada 2020 support in the compiler.
+### Ada 2022 activation
+Firstly, let's activate Ada 2022 support in the compiler.
 Usually we do this by `-gnat2022` option in compiler command line or in the project file
 (preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need some predefined packages.
@@ -24,7 +24,7 @@ with Ada.Characters.Conversions;
 ```
 
 ### New aspects
-In Ada 2020 you can use string, integer or real literals with your type. To do so just specify one or more new aspects:
+In Ada 2022 you can use string, integer or real literals with your type. To do so just specify one or more new aspects:
  * `Integer_Literal`
  * `Real_Literal`
  * `String_Literal`
@@ -116,7 +116,7 @@ Print ("5" + 3);
 
 
 ## References:
- * [Ada Reference Manual 2020 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-4-2-1.html)
+ * [Ada Reference Manual 2022 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-4-2-1.html)
  * [AI12-0249-1](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0249-1.TXT)
  * [AI12-0342-1](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0342-1.TXT)
  ----

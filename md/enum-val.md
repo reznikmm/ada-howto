@@ -1,6 +1,6 @@
-# Ada 2020: Enumeration representation
+# Ada 2022: Enumeration representation
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
+This post is a part of [the Ada 2022 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
@@ -9,8 +9,8 @@ You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
-### Ada 2020 activation
-Firstly, let's activate Ada 2020 support in the compiler.
+### Ada 2022 activation
+Firstly, let's activate Ada 2022 support in the compiler.
 Usually we do this by `-gnat2022` option in compiler command line or in the project file
 (preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need some predefined packages.
@@ -76,7 +76,7 @@ for My_Boolean use (False => 3, True => 6);
 
 Here we created a copy of Boolean type and assigned it a custom representation.
 
-In Ada 2020 we can get an integer value of the representation with `Type'Enum_Rep(Enum)` attribute:
+In Ada 2022 we can get an integer value of the representation with `Type'Enum_Rep(Enum)` attribute:
 
 
 ```Ada
@@ -133,7 +133,7 @@ Ada.Integer_Text_IO.Put (My_Boolean'Pos (True));
 
 Custom representation could be useful for integration with a low level protocol or a hardware.
 
-## Before Ada 2020
+## Before Ada 2022
 This looks like not a big deal, but let see how it works with Ada 2012 and before. Firstly we need an integer type of matching size, then we should instantiate `Ada.Unchecked_Conversion`.
 
 
@@ -166,7 +166,7 @@ Ada.Integer_Text_IO.Put (Integer (To_Int (True)));
 But this solution doesn't work for generic formal type (because T'Size should be a static value)!
 
 ## References:
- * [Ada Reference Manual 2020 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-13-4.html)
+ * [Ada Reference Manual 2022 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-13-4.html)
  * [AI12-0237-1](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0237-1.TXT)
  ----
 

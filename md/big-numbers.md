@@ -1,6 +1,6 @@
-# Ada 2020: Big Numbers
+# Ada 2022: Big Numbers
  
-This post is a part of [the Ada 2020 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
+This post is a part of [the Ada 2022 series](https://github.com/reznikmm/ada-howto/tree/ce-2021).
  
 You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
@@ -9,8 +9,8 @@ You can launch this notebook with Jupyter Ada Kernel by clicking this button:
  
  * [About Jupyter Ada Kernel](https://github.com/reznikmm/ada-howto/blob/master/md/Hello_Ada.md).
 
-### Ada 2020 activation
-Firstly, let's activate Ada 2020 support in the compiler.
+### Ada 2022 activation
+Firstly, let's activate Ada 2022 support in the compiler.
 Usually we do this by `-gnat2022` option in compiler command line or in the project file
 (preferred). But in this notebook we will do this by the `pragma Ada_2022`.
 Also we will need some predefined packages, especially `Ada.Numerics.Big_Numbers.Big_Integers`.
@@ -195,10 +195,10 @@ SHA_256 : Ada.Streams.Stream_Element_Array :=
   GNAT.SHA256.Digest (Header_And_Payload);
 
 Message : Ada.Streams.Stream_Element_Array :=
- [0, 1] & [1 .. 202 => 16#FF#] & [0] &
- [16#30#, 16#31#, 16#30#, 16#0d#, 16#06#, 16#09#, 16#60#, 16#86#,
+ (0, 1) & (1 .. 202 => 16#FF#) & 0 &
+ (16#30#, 16#31#, 16#30#, 16#0d#, 16#06#, 16#09#, 16#60#, 16#86#,
   16#48#, 16#01#, 16#65#, 16#03#, 16#04#, 16#02#, 16#01#, 16#05#,
-  16#00#, 16#04#, 16#20#] & 
+  16#00#, 16#04#, 16#20#) & 
  SHA_256;
 ```
 
@@ -265,10 +265,10 @@ Ada.Text_IO.Put_Line("Match:" & Boolean'Image(Signature = S));
 
 This is the end of the RSA example.
 
-Besides Big_Integer, Ada 2020 provides [Big Reals](http://www.ada-auth.org/standards/2xaarm/html/AA-A-5-7.html).
+Besides Big_Integer, Ada 2022 provides [Big Reals](http://www.ada-auth.org/standards/2xaarm/html/AA-A-5-7.html).
 
 ## References:
- * [Ada Reference Manual 2020 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-A-5-6.html)
+ * [Ada Reference Manual 2022 Draft](http://www.ada-auth.org/standards/2xaarm/html/AA-A-5-6.html)
  * [AI12-0208-1](http://www.ada-auth.org/cgi-bin/cvsweb.cgi/AI12s/AI12-0208-1.TXT)
  ----
 
